@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0">
         <img
-          src="/images/machine-and-carpet.jpeg"
+          src={`${process.env.PUBLIC_URL}/images/machine-and-carpet.jpeg`}
           alt="Halı Yıkama"
           className="w-full h-full object-cover"
         />

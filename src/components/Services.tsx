@@ -12,7 +12,7 @@ const Services: React.FC = () => {
         'Son sistem makinelerde, hijyen kurallarına uygun şekilde yıkanır',
         'Hav alma ve son kontrol sonrası poşetlenerek teslim edilir',
       ],
-      image: '/images/carpets-cleaning-process.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/carpets-cleaning-process.jpeg`,
     },
     {
       title: 'Yorgan & Battaniye Yıkama',
@@ -21,7 +21,7 @@ const Services: React.FC = () => {
         'Elyaf ve yün yorganlarınız, endüstriyel çamaşır makinelerinde tek tek yıkanır',
         'Battaniyeleriniz özel programlarla yıpratılmadan tertemiz hale getirilir',
       ],
-      image: '/images/drying-carpets.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/drying-carpets.jpeg`,
     },
     {
       title: 'Stor Perde Yıkama',
@@ -30,7 +30,7 @@ const Services: React.FC = () => {
         'Stor perdeleriniz hassas programlarla yıkanır',
         'Kırışmadan ve zarar görmeden teslim edilir',
       ],
-      image: '/images/roller-blinds.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/roller-blinds.jpeg`,
     },
   ];
 
