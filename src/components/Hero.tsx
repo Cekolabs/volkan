@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             Halı, yorgan, battaniye ve stor perdelerinizi itina ile
             temizliyoruz.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="tel:+905551234567" className="btn-primary text-lg">
               <Phone className="w-5 h-5 mr-2" />
               Hemen Ara

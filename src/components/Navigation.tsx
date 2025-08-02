@@ -49,7 +49,10 @@ const Navigation: React.FC<NavigationProps> = ({
             ))}
           </div>
           <div className="flex items-center space-x-4">
-            <a href="tel:+905551234567" className="btn-primary text-sm">
+            <a
+              href="tel:+905551234567"
+              className="btn-primary text-sm inline-flex items-center"
+            >
               <Phone className="w-4 h-4 mr-2" />
               Hemen Ara
             </a>
