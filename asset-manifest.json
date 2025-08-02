@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/volkan/static/css/main.9cd4977b.css",
+    "main.js": "/volkan/static/js/main.cfdc9f52.js",
+    "static/js/453.ecb967bd.chunk.js": "/volkan/static/js/453.ecb967bd.chunk.js",
+    "index.html": "/volkan/index.html",
+    "main.9cd4977b.css.map": "/volkan/static/css/main.9cd4977b.css.map",
+    "main.cfdc9f52.js.map": "/volkan/static/js/main.cfdc9f52.js.map",
+    "453.ecb967bd.chunk.js.map": "/volkan/static/js/453.ecb967bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cd4977b.css",
+    "static/js/main.cfdc9f52.js"
+  ]
+}
