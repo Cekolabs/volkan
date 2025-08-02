@@ -4,7 +4,7 @@ import { Phone, MessageCircle, ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0">
         <img
           src="/images/machine-and-carpet.jpeg"
@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             Halılarınızı Kendi Halımız Gibi Yıkıyoruz!
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
             2008'den bu yana binlerce mutlu müşteri…
             <br />
             Halı, yorgan, battaniye ve stor perdelerinizi itina ile
