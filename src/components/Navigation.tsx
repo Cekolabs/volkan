@@ -49,7 +49,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {/* Desktop Contact Button */}
           <div className="hidden lg:flex items-center">
             <a
-              href="tel:+905551234567"
+              href="tel:+905443518406"
               className="btn-primary text-sm inline-flex items-center"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -60,7 +60,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-2">
             <a
-              href="tel:+905551234567"
+              href="tel:+905443518406"
               className="btn-primary text-xs inline-flex items-center"
             >
               <Phone className="w-3 h-3 mr-1" />

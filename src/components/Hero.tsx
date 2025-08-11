@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0">
         <img
-          src={`${process.env.PUBLIC_URL}/images/machine-and-carpet.jpeg`}
+          src={`${process.env.PUBLIC_URL}/images/hero-carpet.jpeg`}
           alt="Halı Yıkama"
           className="w-full h-full object-cover"
         />
@@ -26,14 +26,14 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:+905551234567"
+              href="tel:+905443518406"
               className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-sm inline-flex items-center text-lg transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" />
               Hemen Ara
             </a>
             <a
-              href="https://wa.me/905551234567"
+              href="https://wa.me/905443518406"
               className="bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-sm inline-flex items-center text-lg transition-colors"
             >
               <MessageCircle className="w-5 h-5 mr-2" />

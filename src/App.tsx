@@ -5,7 +5,6 @@ import {
   About,
   Services,
   Process,
-  Testimonials,
   Contact,
   Footer,
 } from './components';
@@ -35,7 +34,6 @@ const App: React.FC = () => {
       <About />
       <Services />
       <Process />
-      <Testimonials />
       <Contact />
       <Footer />
     </div>
