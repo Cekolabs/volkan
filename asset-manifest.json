@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/volkan/static/css/main.0f9c556b.css",
-    "main.js": "/volkan/static/js/main.12a6e930.js",
+    "main.css": "/volkan/static/css/main.b0060d53.css",
+    "main.js": "/volkan/static/js/main.8bc99133.js",
     "static/js/453.ecb967bd.chunk.js": "/volkan/static/js/453.ecb967bd.chunk.js",
     "index.html": "/volkan/index.html",
-    "main.0f9c556b.css.map": "/volkan/static/css/main.0f9c556b.css.map",
-    "main.12a6e930.js.map": "/volkan/static/js/main.12a6e930.js.map",
+    "main.b0060d53.css.map": "/volkan/static/css/main.b0060d53.css.map",
+    "main.8bc99133.js.map": "/volkan/static/js/main.8bc99133.js.map",
     "453.ecb967bd.chunk.js.map": "/volkan/static/js/453.ecb967bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f9c556b.css",
-    "static/js/main.12a6e930.js"
+    "static/css/main.b0060d53.css",
+    "static/js/main.8bc99133.js"
   ]
 }
