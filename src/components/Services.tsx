@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Package, Bed, Square } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
     {
       title: 'Halı Yıkama',
-      icon: '🧺',
+      icon: <Package className="w-12 h-12 text-primary-600" />,
       features: [
         'Halılarınız tek tek ıslatılır, havuz sistemi kullanılmaz',
         'Son sistem makinelerde, hijyen kurallarına uygun şekilde yıkanır',
@@ -16,7 +15,7 @@ const Services: React.FC = () => {
     },
     {
       title: 'Yorgan & Battaniye Yıkama',
-      icon: '🛏️',
+      icon: <Bed className="w-12 h-12 text-primary-600" />,
       features: [
         'Elyaf ve yün yorganlarınız, endüstriyel çamaşır makinelerinde tek tek yıkanır',
         'Battaniyeleriniz özel programlarla yıpratılmadan tertemiz hale getirilir',
@@ -25,7 +24,7 @@ const Services: React.FC = () => {
     },
     {
       title: 'Stor Perde Yıkama',
-      icon: '🪟',
+      icon: <Square className="w-12 h-12 text-primary-600" />,
       features: [
         'Stor perdeleriniz hassas programlarla yıkanır',
         'Kırışmadan ve zarar görmeden teslim edilir',
@@ -37,28 +36,18 @@ const Services: React.FC = () => {
   return (
     <section id="hizmetler" className="section-padding">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Sunduğumuz Hizmetler
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto"></div>
-        </motion.div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover"
+              className="bg-white rounded-sm shadow-xl overflow-hidden card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -68,7 +57,7 @@ const Services: React.FC = () => {
                 />
               </div>
               <div className="p-8">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
@@ -81,7 +70,7 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
@@ -26,28 +25,18 @@ const Testimonials: React.FC = () => {
   return (
     <section id="yorumlar" className="section-padding">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Müşterilerimizin Gözünden Biz
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto"></div>
-        </motion.div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg card-hover"
+              className="bg-white rounded-sm p-8 shadow-lg card-hover"
             >
               <div className="flex items-center mb-4">
                 {[...Array(review.rating)].map((_, i) => (
@@ -67,7 +56,7 @@ const Testimonials: React.FC = () => {
                   <p className="text-gray-600 text-sm">Mutlu Müşteri</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

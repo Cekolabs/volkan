@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { Phone, Menu, X } from 'lucide-react';
 
 interface NavigationProps {
@@ -12,8 +11,6 @@ const Navigation: React.FC<NavigationProps> = ({
   scrollToSection,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 100], [0, -20]);
 
   const menuItems = [
     'hakkimizda',
@@ -29,22 +26,12 @@ const Navigation: React.FC<NavigationProps> = ({
   };
 
   return (
-    <motion.nav
-      className={`fixed top-4 left-4 right-4 z-50 transition-all duration-300 rounded-lg ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
-      style={{ y }}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container-custom px-4 py-3">
         <div className="flex items-center justify-between">
-          <motion.div
-            className="text-xl md:text-2xl font-bold text-gradient"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="text-xl md:text-2xl font-bold text-primary-600">
             VOLKAN HALI YIKAMA
-          </motion.div>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -52,11 +39,7 @@ const Navigation: React.FC<NavigationProps> = ({
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`font-medium transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-primary-600'
-                    : 'text-white hover:text-primary-300'
-                }`}
+                className="font-medium text-gray-700 hover:text-primary-600"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
               </button>
@@ -85,11 +68,7 @@ const Navigation: React.FC<NavigationProps> = ({
             </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-lg transition-colors duration-300 ${
-                isScrolled
-                  ? 'text-gray-700 hover:text-primary-600'
-                  : 'text-white hover:text-primary-300'
-              }`}
+              className="p-2 text-gray-700 hover:text-primary-600"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -102,28 +81,23 @@ const Navigation: React.FC<NavigationProps> = ({
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden mt-4 pb-4"
-          >
-            <div className="bg-white/95 backdrop-blur-md rounded-lg p-4 shadow-lg">
+          <div className="lg:hidden mt-4 pb-4">
+            <div className="bg-gray-50 rounded-sm p-4 shadow-lg">
               {menuItems.map((item) => (
                 <button
                   key={item}
                   onClick={() => handleMenuClick(item)}
-                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-300"
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-sm"
                 >
                   {item.charAt(0).toUpperCase() +
                     item.slice(1).replace('-', ' ')}
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

@@ -1,29 +1,17 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
     <section id="iletisim" className="section-padding bg-gray-900 text-white">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Bize Ulaşın</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto"></div>
-        </motion.div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <div className="space-y-6">
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 text-primary-400 mr-4" />
@@ -72,15 +60,9 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 text-gray-900"
-          >
+          <div className="bg-white rounded-sm p-8 text-gray-900">
             <h3 className="text-2xl font-bold mb-6">Hızlı İletişim Formu</h3>
             <form className="space-y-4">
               <div>
@@ -89,7 +71,7 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Adınızı girin"
                 />
               </div>
@@ -99,7 +81,7 @@ const Contact: React.FC = () => {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Telefon numaranızı girin"
                 />
               </div>
@@ -109,7 +91,7 @@ const Contact: React.FC = () => {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="Mesajınızı yazın..."
                 ></textarea>
               </div>
@@ -117,7 +99,7 @@ const Contact: React.FC = () => {
                 Gönder
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
