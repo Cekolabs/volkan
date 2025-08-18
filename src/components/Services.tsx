@@ -20,7 +20,7 @@ const Services: React.FC = () => {
         'Elyaf ve yün yorganlarınız, endüstriyel çamaşır makinelerinde tek tek yıkanır',
         'Battaniyeleriniz özel programlarla yıpratılmadan tertemiz hale getirilir',
       ],
-      image: `${process.env.PUBLIC_URL}/images/drying-carpets.jpeg`,
+      image: `${process.env.PUBLIC_URL}/images/machine-and-carpet.jpeg`,
     },
     {
       title: 'Stor Perde Yıkama',

@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
                 <MapPin className="w-6 h-6 text-primary-400 mr-4 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Adres</h3>
-                  <p className="text-gray-300">İstanbul, Türkiye</p>
+                  <p className="text-gray-300">Ankara, Türkiye</p>
                 </div>
               </div>
 

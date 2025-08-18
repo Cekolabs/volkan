@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Navigation,
   Hero,
+  Videos,
   About,
   Services,
   Process,
@@ -31,6 +32,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Navigation isScrolled={isScrolled} scrollToSection={scrollToSection} />
       <Hero />
+      <Videos />
       <About />
       <Services />
       <Process />

@@ -23,6 +23,10 @@ const Hero: React.FC = () => {
             <br />
             Halı, yorgan, battaniye ve stor perdelerinizi itina ile
             temizliyoruz.
+            <br />
+            <span className="block mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold">
+              <strong>ANKARA</strong>'da hizmetinizdeyiz!
+            </span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -30,7 +34,7 @@ const Hero: React.FC = () => {
               className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-sm inline-flex items-center text-lg transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Hemen Ara
+              (544) 351 8406
             </a>
             <a
               href="https://wa.me/905443518406"

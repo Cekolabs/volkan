@@ -1,5 +1,6 @@
 export { default as Navigation } from './Navigation';
 export { default as Hero } from './Hero';
+export { default as Videos } from './Videos';
 export { default as About } from './About';
 export { default as Services } from './Services';
 export { default as Process } from './Process';

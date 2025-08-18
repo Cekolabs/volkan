@@ -13,15 +13,15 @@ const Navigation: React.FC<NavigationProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    'hakkimizda',
-    'hizmetler',
-    'nasil-calisiyoruz',
-    'yorumlar',
-    'iletisim',
+    { title: 'Hakkımızda', id: 'hakkimizda' },
+    { title: 'Hizmetler', id: 'hizmetler' },
+    { title: 'Nasıl Çalışıyoruz', id: 'nasil-calisiyoruz' },
+    { title: 'Yorumlar', id: 'yorumlar' },
+    { title: 'İletişim', id: 'iletisim' },
   ];
 
-  const handleMenuClick = (item: string) => {
-    scrollToSection(item);
+  const handleMenuClick = (item: { id: string }) => {
+    scrollToSection(item.id);
     setIsMenuOpen(false);
   };
 
@@ -37,11 +37,11 @@ const Navigation: React.FC<NavigationProps> = ({
           <div className="hidden lg:flex items-center space-x-6">
             {menuItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className="font-medium text-gray-700 hover:text-primary-600"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
+                {item.title}
               </button>
             ))}
           </div>
@@ -85,12 +85,11 @@ const Navigation: React.FC<NavigationProps> = ({
             <div className="bg-gray-50 rounded-sm p-4 shadow-lg">
               {menuItems.map((item) => (
                 <button
-                  key={item}
+                  key={item.id}
                   onClick={() => handleMenuClick(item)}
                   className="block w-full text-left py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-gray-100 rounded-sm"
                 >
-                  {item.charAt(0).toUpperCase() +
-                    item.slice(1).replace('-', ' ')}
+                  {item.title}
                 </button>
               ))}
             </div>
