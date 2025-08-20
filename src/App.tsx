@@ -6,6 +6,7 @@ import {
   About,
   Services,
   Process,
+  TechnicalProcess,
   Contact,
   Footer,
 } from './components';
@@ -32,7 +33,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Navigation isScrolled={isScrolled} scrollToSection={scrollToSection} />
       <Hero />
-      <Videos />
+      <TechnicalProcess />
       <About />
       <Services />
       <Process />

@@ -4,5 +4,6 @@ export { default as Videos } from './Videos';
 export { default as About } from './About';
 export { default as Services } from './Services';
 export { default as Process } from './Process';
+export { default as TechnicalProcess } from './TechnicalProcess';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
