@@ -139,6 +139,70 @@ const Process: React.FC = () => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {step.desc}
                 </p>
+                {/* Media additions for specific steps */}
+                {step.title === 'Endüstriyel Halı Yıkama' && (
+                  <div className="mt-4">
+                    <video
+                      className="w-full h-auto aspect-video object-cover rounded-md shadow-md"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      controls={false}
+                    >
+                      <source
+                        src={`${process.env.PUBLIC_URL}/videos/carpet-video3.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                )}
+                {step.title === 'Durulama ve Sıkma' && (
+                  <div className="mt-4">
+                    <h4 className="text-md font-semibold text-gray-900 mb-2 text-center">
+                      Halılarınız %96 oranında sıktırılır
+                    </h4>
+                    <video
+                      className="w-full h-auto aspect-video object-cover rounded-md shadow-md"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      controls={false}
+                    >
+                      <source
+                        src={`${process.env.PUBLIC_URL}/videos/carpet-video2.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                )}
+                {step.title === 'Kurutma' && (
+                  <div className="mt-4">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/drying-carpets.jpeg`}
+                      alt="Kurutma alanlarımız"
+                      className="w-full h-auto rounded-md shadow-md object-cover"
+                    />
+                  </div>
+                )}
+                {step.title === 'Hav Alma ve Paketleme' && (
+                  <div className="mt-4">
+                    <video
+                      className="w-full h-auto aspect-video object-cover rounded-md shadow-md"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      controls={false}
+                    >
+                      <source
+                        src={`${process.env.PUBLIC_URL}/videos/carpet-video.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                )}
               </div>
             ))}
           </div>
