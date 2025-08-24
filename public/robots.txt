@@ -1,3 +1,17 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.volkanhaliyikama2008.com/sitemap.xml
+
+# Disallow specific paths if needed (optional)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Allow all other content
+Allow: /images/
+Allow: /videos/
+Allow: /css/
+Allow: /js/

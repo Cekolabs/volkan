@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   Navigation,
   Hero,
-  Videos,
   About,
   Services,
   Process,

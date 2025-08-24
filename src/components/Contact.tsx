@@ -1,7 +1,24 @@
 import React from 'react';
-import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Mail, Navigation } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const locations: string[] = [
+    'Ankara',
+    'Güneş evler',
+    'Keçiören',
+    'Kamil ocak',
+    'Çaldıran',
+    'Tepebaşı',
+    'Yıldız tepe',
+    'Hasköy',
+    'Aydınlık evler',
+    'Pursaklar',
+    'Mamak',
+    'Cebeci',
+    'Etlik',
+    'Subay Evler',
+  ];
+
   return (
     <section id="iletisim" className="section-padding bg-gray-900 text-white">
       <div className="container-custom">
@@ -62,18 +79,71 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* Map - Right side on desktop, bottom on mobile */}
+            {/* Custom Ankara Map - Right side on desktop, bottom on mobile */}
             <div className="w-full h-96 lg:h-full min-h-[400px] lg:col-start-1 lg:row-start-1">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3056.8123354821796!2d32.90345807598997!3d39.99029897151138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDU5JzI1LjEiTiAzMsKwNTQnMjEuNyJF!5e0!3m2!1str!2str!4v1755799596721!5m2!1str!2str"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full rounded-lg"
-              ></iframe>
+              <div className="relative w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-primary-500/30">
+                {/* Map Background Pattern */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full"></div>
+                  <div className="absolute top-16 left-16 w-1.5 h-1.5 bg-white rounded-full"></div>
+                  <div className="absolute top-24 right-24 w-1 h-1 bg-white rounded-full"></div>
+                  <div className="absolute top-32 left-32 w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute top-40 right-40 w-1.5 h-1.5 bg-white rounded-full"></div>
+                  <div className="absolute top-48 left-48 w-1 h-1 bg-white rounded-full"></div>
+                  <div className="absolute top-56 right-56 w-2 h-2 bg-white rounded-full"></div>
+                </div>
+
+                {/* Ankara City Representation */}
+                <div className="absolute top-1/4 left-1/2 transform -tanslate-x-1/2 flex items-center justify-center">
+                  <div className="text-center">
+                    {/* City Icon */}
+                    <div className="mb-4">
+                      <Navigation className="w-16 h-16 text-primary-400 mx-auto" />
+                    </div>
+
+                    {/* City Name */}
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      ANKARA
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Location Pin */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative">
+                    <div className="w-4 h-4 bg-primary-500 rounded-full animate-pulse"></div>
+                    <div className="w-6 h-6 bg-primary-500/30 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping"></div>
+                  </div>
+                </div>
+
+                {/* Mock Service Areas */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-black/40 backdrop-blur-sm rounded-lg p-3">
+                    <h4 className="text-sm font-semibold text-primary-300 mb-2">
+                      Hizmet Bölgeleri
+                    </h4>
+                    <div className="flex flex-wrap gap-2 text-xs text-gray-300 max-h-24 overflow-y-auto">
+                      {locations.map((location, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-primary-500/20 rounded"
+                        >
+                          {location}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative Elements */}
+                <div className="absolute top-2 right-2">
+                  <div className="w-3 h-3 bg-primary-400 rounded-full opacity-60"></div>
+                </div>
+                <div className="absolute bottom-2 left-2">
+                  <div className="w-2 h-2 bg-primary-300 rounded-full opacity-60"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
