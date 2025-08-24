@@ -17,6 +17,7 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Halılarınız fabrikamıza ulaştığında öncelikle uzman ekibimiz tarafından leke türü, halı cinsi ve dokusu tespit edilir. Böylece her halıya uygun özel yıkama programı belirlenir.',
       media: null,
       mediaType: null,
+      alt: 'Ön İnceleme ve Sınıflandırma',
     },
     {
       step: <Brush className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -24,6 +25,7 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Son teknoloji toz alma makinelerimiz ile halının derinlerinde birikmiş toz, kum ve partiküller tamamen temizlenir. Bu adım, yıkama sırasında halı liflerine zarar gelmesini önler.',
       media: null,
       mediaType: null,
+      alt: 'Toz Alma ve Ön Temizlik',
     },
     {
       step: <Droplets className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -31,6 +33,7 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Zorlu lekeler için özel leke çözücüler kullanılır. Halının türüne göre pH dengeli ve çevre dostu deterjanlar tercih edilir.',
       media: null,
       mediaType: null,
+      alt: 'Ön Yıkama ve Leke Çıkarma',
     },
     {
       step: <Settings className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -38,6 +41,7 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Halılarınız tam otomatik silindirik fırçalı makinelerde 360° fırçalama yöntemi ile, havuz sistemi kullanılmadan, ayrı ayrı yıkanır. Bu yöntemle hem hijyen hem de halı ömrü korunur.',
       media: `${process.env.PUBLIC_URL}/videos/carpet-video3.mp4`,
       mediaType: 'video',
+      alt: 'Endüstriyel Halı Yıkama',
     },
     {
       step: <Zap className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -46,6 +50,7 @@ const TechnicalProcess: React.FC = () => {
       media: `${process.env.PUBLIC_URL}/videos/carpet-video2.mp4`,
       mediaType: 'video',
       extraInfo: 'Halılarınız %96 oranında sıktırılır',
+      alt: 'Durulama ve Sıkma',
     },
     {
       step: <Wind className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -53,6 +58,7 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Halılarınız, kapalı ve tozsuz ortamda, doğal hava sirkülasyonu ve nem kontrollü sistemlerle kurutulur.',
       media: `${process.env.PUBLIC_URL}/images/drying-carpets.jpeg`,
       mediaType: 'image',
+      alt: 'Kurutma',
     },
     {
       step: <Package2 className="w-12 h-12 text-primary-600 mx-auto" />,
@@ -60,12 +66,14 @@ const TechnicalProcess: React.FC = () => {
       desc: 'Tamamen kuruyan halılar hav alma makinelerinden geçirilir, son kontroller yapılır ve poşetlenerek tertemiz şekilde adresinize teslim edilir.',
       media: `${process.env.PUBLIC_URL}/videos/carpet-video.mp4`,
       mediaType: 'video',
+      alt: 'Hav Alma ve Paketleme',
     },
   ];
 
   const renderMedia = (
     media: string | null,
-    mediaType: 'video' | 'image' | null
+    mediaType: 'video' | 'image' | null,
+    alt: string
   ) => {
     if (!media || !mediaType) return null;
 
@@ -88,7 +96,7 @@ const TechnicalProcess: React.FC = () => {
       return (
         <img
           src={media}
-          alt=""
+          alt={alt}
           className="w-full aspect-video rounded-md shadow-md object-cover"
         />
       );
@@ -140,7 +148,11 @@ const TechnicalProcess: React.FC = () => {
 
               {step.media && step.mediaType && (
                 <div className="mt-4">
-                  {renderMedia(step.media, step.mediaType as 'video' | 'image')}
+                  {renderMedia(
+                    step.media,
+                    step.mediaType as 'video' | 'image',
+                    step.alt
+                  )}
                 </div>
               )}
             </div>
