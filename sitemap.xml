@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Hakkımızda Bölümü -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/#about</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Hizmetler Bölümü -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/#services</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Süreç Bölümü -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/#process</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Teknik Süreç Bölümü -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/#technical-process</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- İletişim Bölümü -->
+  <url>
+    <loc>https://www.volkanhaliyikama2008.com/#contact</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
